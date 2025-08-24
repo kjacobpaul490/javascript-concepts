@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jsonArrays.js"></script>
+</head>
+
+<body>
+    <h1 id="h1BookDetails">Book Details</h1>
+    <label id="lblBookName" for="txtBookName">Book Name</label>
+    <input type="text" id="txtBookName"><br>
+    <label id="lblAuthor" for="txtAuthor">Author</label>
+    <input type="text" id="txtAuthor"><br>
+    <label id="lblPrice" for="txtPrice">Price</label>
+    <input type="number" id="txtPrice"><br>
+    <label id="lblPublishDt" for="txtPublishDt">PublishDt</label>
+    <input type="date" id="txtPublishDt"><br>
+    <label id="lblPublisher" for="txtPublisher">Publisher</label>
+    <input type="text" id="txtPublisher"><br>
+
+    <button id="btnSave" onclick="saveBook(txtBookName.value,txtAuthor.value,txtPrice.value,txtPublishDt.value,txtPublisher
+    .value)">Save</button>
+
+<button id="btnShowTbl" onclick="showTable()">Show Books</button>
+    <table id="tblBooksDetails">
+
+    </table>
+</body>
+
+</html>
