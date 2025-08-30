@@ -5,10 +5,13 @@
     </head>
     <body>
         <h1>String Methods</h1>
+
+        <!-- Length String Methods -->
         <label>String</label>
         <input type="text" id="txtString">
         <button onclick="lengthStringMethods(txtString.value)">Length String Methods</button>
         <p id="lblLengthResult"></p>
+
         <label>First Name</label>
         <input type="text" id="txtFirstName">
         <label>Last Name</label>
@@ -17,13 +20,14 @@
         <p id="lblFullNameResult"></p>
         <p id="lblFullNameConcatMethodResult"></p>
         <p id="lblFullNameConcatSpaceMethodResult"></p>
-        <label>Company name</label>
 
+        <label>Company name</label>
         <input type="text" id="txtCompanyName">
         <label>Search</label>
         <input type="text" id="txtSearch">
         <button onclick="indexOfStringMethods(txtCompanyName.value,txtSearch.value)">IndexOf String Methods</button>
         <p id="lblIndexOfResult"></p>
+
         <label>Slice String</label>
         <input type="text" id="txtSlice">
         <label>Start</label>
@@ -32,14 +36,68 @@
         <input type="number" id="txtEnd">
         <button onclick="sliceStringMethods(txtSlice.value,txtStart.value,txtEnd.value)">Slice String Methods</button>
         <p id="lblSliceResult"></p>
-        <button onclick="splitStringMethods(txtString.value)">Split String Methods</button>
-        <button onclick="substringStringMethods(txtString.value)">Substring String Methods</button>
-        <button onclick="toUpperCaseStringMethods(txtString.value)">UpperCase String Methods</button>
-        <button onclick="toLowerCaseStringMethods(txtString.value)">LowerCase String Methods</button>
-        <button onclick="trimStringMethods(txtString.value)">Trim String Methods</button>
-        <button onclick="replaceStringMethods(txtString.value)">Replace String Methods</button>
-        <button onclick="searchStringMethods(txtString.value)">Search String Methods</button>
-        <button onclick="matchStringMethods(txtString.value)">Match String Methods</button>
+
+        <label>Split String</label>
+        <input type="text" id="txtSplit">
+        <label>Split By</label>
+        <input type="text" id="txtSplitBy">
+        <button onclick="splitStringMethods(txtSplit.value,txtSplitBy.value)">Split String Methods</button>        
+        <p id="lblSplitResult"></p>  
+
+        <label>Substring String</label>
+        <input type="text" id="txtSubstring">
+        <label>Start</label>
+        <input type="number" id="txtSubstringStart">
+        <label>End</label>
+        <input type="number" id="txtSubstringEnd">
+        <button onclick="substringStringMethods(txtSubstring.value,txtSubstringStart.value,txtSubstringEnd.value)">Substring String Methods</button>  
+        <p id="lblSubstringResult"></p>
+
+        <!-- UpperCase String Methods -->
+        <label>UpperCase String</label>
+        <input type="text" id="txtUpperCase">
+        <button onclick="toUpperCaseStringMethods(txtUpperCase.value)">UpperCase String Methods</button>
+        <p id="lblUpperCaseResult"></p>
+
+        <!-- LowerCase String Methods -->
+        <label>LowerCase String</label>
+        <input type="text" id="txtLowerCase">
+        <button onclick="toLowerCaseStringMethods(txtLowerCase.value)">LowerCase String Methods</button>
+        <p id="lblLowerCaseResult"></p>
+
+        <!-- Trim String Methods -->
+        <label>Trim String</label>
+        <input type="text" id="txtTrim">
+        <button onclick="trimStringMethods(txtTrim.value)">Trim String Methods</button>
+        <p id="lblTrimResult"></p>
+
+        <!-- Replace String Methods -->
+        <label>Replace String</label>
+        <input type="text" id="txtReplaceString">
+        <label>Replace</label>
+        <input type="text" id="txtReplace">
+        <label>Replace With</label>
+        <input type="text" id="txtReplaceWith">
+        <button onclick="replaceStringMethods(txtReplaceString.value,txtReplace.value,txtReplaceWith.value)">Replace String Methods</button>
+        <p id="lblReplaceResult"></p>
+
+        <!-- Search String Methods -->
+        <label>Search String</label>
+        <input type="text" id="txtSearchString">
+        <label>Search</label>
+        <input type="text" id="txtFindSearch">
+        <button onclick="searchStringMethods(txtSearchString.value,txtFindSearch.value)">Search String Methods</button>
+        <p id="lblSearchResult"></p>
+
+        <!-- Match String Methods -->
+        <label>Match String</label>
+        <label for="txtMatchString">Match String</label>
+        <input type="text" id="txtMatchString">
+        <label for="txtMatch">Match</label>
+        <input type="text" id="txtMatch">
+        <button onclick="matchStringMethods(txtMatchString.value,txtMatch.value)">Match String Methods</button>
+        <p id="lblMatchResult"></p>
+        
         <button onclick="includesStringMethods(txtString.value)">Includes String Methods</button>
         <button onclick="startsWithStringMethods(txtString.value)">StartsWith String Methods</button>
         <button onclick="endsWithStringMethods(txtString.value)">EndsWith String Methods</button>
