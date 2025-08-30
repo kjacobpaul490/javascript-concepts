@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="logicalOperators.js"></script>
+</head>
+
+<body>
+    <form onsubmit="return false;">
+        <label>First Name</label>
+        <input type="text" id="txtFirstName" placeholder="Enter First Name" required>
+        <label>Last Name</label>
+        <input type="text" id="txtLastName" placeholder="Enter Last Name">
+        <label>Gender</label>
+        <input type="radio" id="txtGender" name="gender" value="Male" required>Male
+        <input type="radio" id="txtGender" name="gender" value="Female" required>Female
+        <label>Age</label>
+        <input type="number" id="txtAge" placeholder="Enter Age" required>
+        <label>Email</label>
+        <input type="email" id="txtEmail" placeholder="Enter Email" required>
+        <label>Education</label>
+        <select id="txtEducation" placeholder="Enter Education" required>
+            <option value="10th">10th</option>
+            <option value="12th">12th</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Post Graduation">Post Graduation</option>
+        </select>
+        <button type="submit"
+            onclick="login(txtFirstName.value,txtLastName.value,txtGender.value,txtAge.value,txtEmail.value,txtEducation.value)">Login</button>
+
+    </form>
+</body>
+
+</html>
