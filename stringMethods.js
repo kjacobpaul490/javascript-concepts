@@ -39,3 +39,14 @@ function concatStringMethods(fname,lname){
 function indexOfStringMethods(companyName,searchText){
     document.getElementById("lblIndexOfResult").innerHTML = companyName.indexOf(searchText);
 }
+/**
+ * This function is used to get the slice of the string.
+ * @param {string} sliceString
+ * @param {number} start
+ * @param {number} end
+ * @returns {Void} Void
+ */
+function sliceStringMethods(sliceString,start,end){
+  
+    document.getElementById("lblSliceResult").innerHTML = sliceString.slice(Number(start),Number(end));
+}

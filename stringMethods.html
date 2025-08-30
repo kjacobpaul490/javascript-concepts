@@ -18,14 +18,20 @@
         <p id="lblFullNameConcatMethodResult"></p>
         <p id="lblFullNameConcatSpaceMethodResult"></p>
         <label>Company name</label>
-        
+
         <input type="text" id="txtCompanyName">
         <label>Search</label>
         <input type="text" id="txtSearch">
         <button onclick="indexOfStringMethods(txtCompanyName.value,txtSearch.value)">IndexOf String Methods</button>
         <p id="lblIndexOfResult"></p>
-
-        <button onclick="sliceStringMethods(txtString.value)">Slice String Methods</button>
+        <label>Slice String</label>
+        <input type="text" id="txtSlice">
+        <label>Start</label>
+        <input type="number" id="txtStart">
+        <label>End</label>
+        <input type="number" id="txtEnd">
+        <button onclick="sliceStringMethods(txtSlice.value,txtStart.value,txtEnd.value)">Slice String Methods</button>
+        <p id="lblSliceResult"></p>
         <button onclick="splitStringMethods(txtString.value)">Split String Methods</button>
         <button onclick="substringStringMethods(txtString.value)">Substring String Methods</button>
         <button onclick="toUpperCaseStringMethods(txtString.value)">UpperCase String Methods</button>
