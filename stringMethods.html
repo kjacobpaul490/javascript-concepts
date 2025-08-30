@@ -1,135 +1,194 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="stringMethods.js"></script>
-    </head>
-    <body>
-        <h1>String Methods</h1>
 
-        <!-- Length String Methods -->
-        <label>String</label>
-        <input type="text" id="txtString">
-        <button onclick="lengthStringMethods(txtString.value)">Length String Methods</button>
-        <p id="lblLengthResult"></p>
+<head>
+    <script src="stringMethods.js"></script>
+</head>
 
-        <label>First Name</label>
-        <input type="text" id="txtFirstName">
-        <label>Last Name</label>
-        <input type="text" id="txtLastName">
-        <button onclick="concatStringMethods(txtFirstName.value,txtLastName.value)">Concat String Methods</button>
-        <p id="lblFullNameResult"></p>
-        <p id="lblFullNameConcatMethodResult"></p>
-        <p id="lblFullNameConcatSpaceMethodResult"></p>
+<body>
+    <h1>String Methods</h1>
 
-        <label>Company name</label>
-        <input type="text" id="txtCompanyName">
-        <label>Search</label>
-        <input type="text" id="txtSearch">
-        <button onclick="indexOfStringMethods(txtCompanyName.value,txtSearch.value)">IndexOf String Methods</button>
-        <p id="lblIndexOfResult"></p>
+    <!-- Length String Methods -->
+    <label>String</label>
+    <input type="text" id="txtString">
+    <button onclick="lengthStringMethods(txtString.value)">Length String Methods</button>
+    <p id="lblLengthResult"></p>
 
-        <label>Slice String</label>
-        <input type="text" id="txtSlice">
-        <label>Start</label>
-        <input type="number" id="txtStart">
-        <label>End</label>
-        <input type="number" id="txtEnd">
-        <button onclick="sliceStringMethods(txtSlice.value,txtStart.value,txtEnd.value)">Slice String Methods</button>
-        <p id="lblSliceResult"></p>
+    <label>First Name</label>
+    <input type="text" id="txtFirstName">
+    <label>Last Name</label>
+    <input type="text" id="txtLastName">
+    <button onclick="concatStringMethods(txtFirstName.value,txtLastName.value)">Concat String Methods</button>
+    <p id="lblFullNameResult"></p>
+    <p id="lblFullNameConcatMethodResult"></p>
+    <p id="lblFullNameConcatSpaceMethodResult"></p>
 
-        <label>Split String</label>
-        <input type="text" id="txtSplit">
-        <label>Split By</label>
-        <input type="text" id="txtSplitBy">
-        <button onclick="splitStringMethods(txtSplit.value,txtSplitBy.value)">Split String Methods</button>        
-        <p id="lblSplitResult"></p>  
+    <label>Company name</label>
+    <input type="text" id="txtCompanyName">
+    <label>Search</label>
+    <input type="text" id="txtSearch">
+    <button onclick="indexOfStringMethods(txtCompanyName.value,txtSearch.value)">IndexOf String Methods</button>
+    <p id="lblIndexOfResult"></p>
 
-        <label>Substring String</label>
-        <input type="text" id="txtSubstring">
-        <label>Start</label>
-        <input type="number" id="txtSubstringStart">
-        <label>End</label>
-        <input type="number" id="txtSubstringEnd">
-        <button onclick="substringStringMethods(txtSubstring.value,txtSubstringStart.value,txtSubstringEnd.value)">Substring String Methods</button>  
-        <p id="lblSubstringResult"></p>
+    <label>Slice String</label>
+    <input type="text" id="txtSlice">
+    <label>Start</label>
+    <input type="number" id="txtStart">
+    <label>End</label>
+    <input type="number" id="txtEnd">
+    <button onclick="sliceStringMethods(txtSlice.value,txtStart.value,txtEnd.value)">Slice String Methods</button>
+    <p id="lblSliceResult"></p>
 
-        <!-- UpperCase String Methods -->
-        <label>UpperCase String</label>
-        <input type="text" id="txtUpperCase">
-        <button onclick="toUpperCaseStringMethods(txtUpperCase.value)">UpperCase String Methods</button>
-        <p id="lblUpperCaseResult"></p>
+    <label>Split String</label>
+    <input type="text" id="txtSplit">
+    <label>Split By</label>
+    <input type="text" id="txtSplitBy">
+    <button onclick="splitStringMethods(txtSplit.value,txtSplitBy.value)">Split String Methods</button>
+    <p id="lblSplitResult"></p>
 
-        <!-- LowerCase String Methods -->
-        <label>LowerCase String</label>
-        <input type="text" id="txtLowerCase">
-        <button onclick="toLowerCaseStringMethods(txtLowerCase.value)">LowerCase String Methods</button>
-        <p id="lblLowerCaseResult"></p>
+    <label>Substring String</label>
+    <input type="text" id="txtSubstring">
+    <label>Start</label>
+    <input type="number" id="txtSubstringStart">
+    <label>End</label>
+    <input type="number" id="txtSubstringEnd">
+    <button onclick="substringStringMethods(txtSubstring.value,txtSubstringStart.value,txtSubstringEnd.value)">Substring
+        String Methods</button>
+    <p id="lblSubstringResult"></p>
 
-        <!-- Trim String Methods -->
-        <label>Trim String</label>
-        <input type="text" id="txtTrim">
-        <button onclick="trimStringMethods(txtTrim.value)">Trim String Methods</button>
-        <p id="lblTrimResult"></p>
+    <!-- UpperCase String Methods -->
+    <label>UpperCase String</label>
+    <input type="text" id="txtUpperCase">
+    <button onclick="toUpperCaseStringMethods(txtUpperCase.value)">UpperCase String Methods</button>
+    <p id="lblUpperCaseResult"></p>
 
-        <!-- Replace String Methods -->
-        <label>Replace String</label>
-        <input type="text" id="txtReplaceString">
-        <label>Replace</label>
-        <input type="text" id="txtReplace">
-        <label>Replace With</label>
-        <input type="text" id="txtReplaceWith">
-        <button onclick="replaceStringMethods(txtReplaceString.value,txtReplace.value,txtReplaceWith.value)">Replace String Methods</button>
-        <p id="lblReplaceResult"></p>
+    <!-- LowerCase String Methods -->
+    <label>LowerCase String</label>
+    <input type="text" id="txtLowerCase">
+    <button onclick="toLowerCaseStringMethods(txtLowerCase.value)">LowerCase String Methods</button>
+    <p id="lblLowerCaseResult"></p>
 
-        <!-- Search String Methods -->
-        <label>Search String</label>
-        <input type="text" id="txtSearchString">
-        <label>Search</label>
-        <input type="text" id="txtFindSearch">
-        <button onclick="searchStringMethods(txtSearchString.value,txtFindSearch.value)">Search String Methods</button>
-        <p id="lblSearchResult"></p>
+    <!-- Trim String Methods -->
+    <label>Trim String</label>
+    <input type="text" id="txtTrim">
+    <button onclick="trimStringMethods(txtTrim.value)">Trim String Methods</button>
+    <p id="lblTrimResult"></p>
 
-        <!-- Match String Methods -->
-        <label>Match String</label>
-        <label for="txtMatchString">Match String</label>
-        <input type="text" id="txtMatchString">
-        <label for="txtMatch">Match</label>
-        <input type="text" id="txtMatch">
-        <button onclick="matchStringMethods(txtMatchString.value,txtMatch.value)">Match String Methods</button>
-        <p id="lblMatchResult"></p>
-        
-        <button onclick="includesStringMethods(txtString.value)">Includes String Methods</button>
-        <button onclick="startsWithStringMethods(txtString.value)">StartsWith String Methods</button>
-        <button onclick="endsWithStringMethods(txtString.value)">EndsWith String Methods</button>
-        <button onclick="padStartStringMethods(txtString.value)">PadStart String Methods</button>
-        <button onclick="padEndStringMethods(txtString.value)">PadEnd String Methods</button>
-        <button onclick="repeatStringMethods(txtString.value)">Repeat String Methods</button>
-        <button onclick="charCodeAtStringMethods(txtString.value)">CharCodeAt String Methods</button>
-        <button onclick="codePointAtStringMethods(txtString.value)">CodePointAt String Methods</button>
-        <button onclick="fromCharCodeStringMethods(txtString.value)">FromCharCode String Methods</button>
-        <button onclick="fromCodePointStringMethods(txtString.value)">FromCodePoint String Methods</button>
-        <button onclick="rawStringMethods(txtString.value)">Raw String Methods</button>
-        <button onclick="escapeStringMethods(txtString.value)">Escape String Methods</button>
-        <button onclick="unescapeStringMethods(txtString.value)">Unescape String Methods</button>
-        <button onclick="evalStringMethods(txtString.value)">Eval String Methods</button>
-        <button onclick="new String(txtString.value)">New String Methods</button>
-        <button onclick="stringLiteralStringMethods(txtString.value)">String Literal String Methods</button>
-        <button onclick="stringTemplateStringMethods(txtString.value)">String Template String Methods</button>
-        <button onclick="stringEscapeStringMethods(txtString.value)">String Escape String Methods</button>
-        <button onclick="stringUnescapeStringMethods(txtString.value)">String Unescape String Methods</button>
-        <button onclick="stringEvalStringMethods(txtString.value)">String Eval String Methods</button>
-        <button onclick="stringNewStringMethods(txtString.value)">String New String Methods</button>
-        <button onclick="stringStringLiteralStringMethods(txtString.value)">String String Literal String Methods</button>
-        <button onclick="stringStringTemplateStringMethods(txtString.value)">String String Template String Methods</button>
-        <button onclick="stringStringEscapeStringMethods(txtString.value)">String String Escape String Methods</button>
-        <button onclick="stringStringUnescapeStringMethods(txtString.value)">String String Unescape String Methods</button>
-        <button onclick="stringStringEvalStringMethods(txtString.value)">String String Eval String Methods</button>
-        <button onclick="stringStringNewStringMethods(txtString.value)">String String New String Methods</button>
-        <button onclick="stringStringStringLiteralStringMethods(txtString.value)">String String String Literal String Methods</button>
-        <button onclick="stringStringStringTemplateStringMethods(txtString.value)">String String String Template String Methods</button>
-        <button onclick="stringStringStringEscapeStringMethods(txtString.value)">String String String Escape String Methods</button>
-        <button onclick="stringStringStringUnescapeStringMethods(txtString.value)">String String String Unescape String Methods</button>
-        <button onclick="stringStringStringEvalStringMethods(txtString.value)">String String String Eval String Methods</button>
-        <button onclick="stringStringStringNewStringMethods(txtString.value)">String String String New String Methods</button>
-    </body>
+    <!-- Replace String Methods -->
+    <label>Replace String</label>
+    <input type="text" id="txtReplaceString">
+    <label>Replace</label>
+    <input type="text" id="txtReplace">
+    <label>Replace With</label>
+    <input type="text" id="txtReplaceWith">
+    <button onclick="replaceStringMethods(txtReplaceString.value,txtReplace.value,txtReplaceWith.value)">Replace String
+        Methods</button>
+    <p id="lblReplaceResult"></p>
+
+    <!-- Search String Methods -->
+    <label>Search String</label>
+    <input type="text" id="txtSearchString">
+    <label>Search</label>
+    <input type="text" id="txtFindSearch">
+    <button onclick="searchStringMethods(txtSearchString.value,txtFindSearch.value)">Search String Methods</button>
+    <p id="lblSearchResult"></p>
+
+    <!-- Match String Methods -->
+    <label>Match String</label>
+    <label for="txtMatchString">Match String</label>
+    <input type="text" id="txtMatchString">
+    <label for="txtMatch">Match</label>
+    <input type="text" id="txtMatch">
+    <button onclick="matchStringMethods(txtMatchString.value,txtMatch.value)">Match String Methods</button>
+    <p id="lblMatchResult"></p>
+
+    <!-- Includes String Methods -->
+    <label>Includes String</label>
+    <input type="text" id="txtIncludesString">
+    <label>Includes</label>
+    <input type="text" id="txtIncludes">
+    <button onclick="includesStringMethods(txtIncludesString.value,txtIncludes.value)">Includes String Methods</button>
+    <p id="lblIncludesResult"></p>
+
+    <!-- StartsWith String Methods -->
+    <label>StartsWith String</label>
+    <input type="text" id="txtStartsWithString">
+    <label>StartsWith</label>
+    <input type="text" id="txtStartsWith">
+    <button onclick="startsWithStringMethods(txtStartsWithString.value,txtStartsWith.value)">StartsWith String
+        Methods</button>
+    <p id="lblStartsWithResult"></p>
+
+    <!-- EndsWith String Methods -->
+    <label>EndsWith String</label>
+    <input type="text" id="txtEndsWithString">
+    <label>EndsWith</label>
+    <input type="text" id="txtEndsWith">
+    <input type="number" id="txtEndsWithLength">
+    <button onclick="endsWithStringMethods(txtEndsWithString.value,txtEndsWith.value,txtEndsWithLength.value)">EndsWith String Methods</button>
+    <p id="lblEndsWithResult"></p>
+    
+    <!-- PadStart String Methods -->
+    <label>PadStart String</label>
+    <input type="text" id="txtPadStartString">
+    <label>PadStart</label>
+    <input type="number" id="txtPadStart">
+    <label>PadStart Char</label>
+    <input type="text" id="txtPadStartChar">
+    <button onclick="padStartStringMethods(txtPadStartString.value,txtPadStart.value,txtPadStartChar.value)">PadStart String Methods</button>
+    <p id="lblPadStartResult"></p>
+    
+    <!-- PadEnd String Methods -->
+    <label>PadEnd String</label>
+    <input type="text" id="txtPadEndString">
+    <label>PadEnd</label>
+    <input type="number" id="txtPadEnd">
+    <label>PadEnd Char</label>
+    <input type="text" id="txtPadEndChar">
+    <button onclick="padEndStringMethods(txtPadEndString.value,txtPadEnd.value,txtPadEndChar.value)">PadEnd String Methods</button>
+    <p id="lblPadEndResult"></p>
+    
+    <!-- Repeat String Methods -->
+    <label>Repeat String</label>
+    <input type="text" id="txtRepeatString">
+    <label>Repeat</label>
+    <input type="number" id="txtRepeat">
+    <button onclick="repeatStringMethods(txtRepeatString.value,txtRepeat.value)">Repeat String Methods</button>
+    <p id="lblRepeatResult"></p>
+    
+    <button onclick="charCodeAtStringMethods(txtString.value)">CharCodeAt String Methods</button>
+    <button onclick="codePointAtStringMethods(txtString.value)">CodePointAt String Methods</button>
+    <button onclick="fromCharCodeStringMethods(txtString.value)">FromCharCode String Methods</button>
+    <button onclick="fromCodePointStringMethods(txtString.value)">FromCodePoint String Methods</button>
+    <button onclick="rawStringMethods(txtString.value)">Raw String Methods</button>
+    <button onclick="escapeStringMethods(txtString.value)">Escape String Methods</button>
+    <button onclick="unescapeStringMethods(txtString.value)">Unescape String Methods</button>
+    <button onclick="evalStringMethods(txtString.value)">Eval String Methods</button>
+    <button onclick="new String(txtString.value)">New String Methods</button>
+    <button onclick="stringLiteralStringMethods(txtString.value)">String Literal String Methods</button>
+    <button onclick="stringTemplateStringMethods(txtString.value)">String Template String Methods</button>
+    <button onclick="stringEscapeStringMethods(txtString.value)">String Escape String Methods</button>
+    <button onclick="stringUnescapeStringMethods(txtString.value)">String Unescape String Methods</button>
+    <button onclick="stringEvalStringMethods(txtString.value)">String Eval String Methods</button>
+    <button onclick="stringNewStringMethods(txtString.value)">String New String Methods</button>
+    <button onclick="stringStringLiteralStringMethods(txtString.value)">String String Literal String Methods</button>
+    <button onclick="stringStringTemplateStringMethods(txtString.value)">String String Template String Methods</button>
+    <button onclick="stringStringEscapeStringMethods(txtString.value)">String String Escape String Methods</button>
+    <button onclick="stringStringUnescapeStringMethods(txtString.value)">String String Unescape String Methods</button>
+    <button onclick="stringStringEvalStringMethods(txtString.value)">String String Eval String Methods</button>
+    <button onclick="stringStringNewStringMethods(txtString.value)">String String New String Methods</button>
+    <button onclick="stringStringStringLiteralStringMethods(txtString.value)">String String String Literal String
+        Methods</button>
+    <button onclick="stringStringStringTemplateStringMethods(txtString.value)">String String String Template String
+        Methods</button>
+    <button onclick="stringStringStringEscapeStringMethods(txtString.value)">String String String Escape String
+        Methods</button>
+    <button onclick="stringStringStringUnescapeStringMethods(txtString.value)">String String String Unescape String
+        Methods</button>
+    <button onclick="stringStringStringEvalStringMethods(txtString.value)">String String String Eval String
+        Methods</button>
+    <button onclick="stringStringStringNewStringMethods(txtString.value)">String String String New String
+        Methods</button>
+</body>
+
 </html>

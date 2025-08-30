@@ -135,3 +135,60 @@ function matchStringMethods(matchString,match){
     
     document.getElementById("lblMatchResult").innerHTML = matchString.match(match);
 }
+/**
+ * This function is used to get the includes of the string.
+ * @param {string} includesString
+ * @param {string} includes
+ * @returns {Void} Void
+ */
+function includesStringMethods(includesString,includes){
+    debugger;
+    document.getElementById("lblIncludesResult").innerHTML = includesString.includes(includes);
+}
+/**
+ * This function is used to get the startsWith of the string.
+ * @param {string} startsWithString
+ * @param {string} startsWith
+ * @returns {Void} Void
+ */
+function startsWithStringMethods(startsWithString,startsWith){
+    document.getElementById("lblStartsWithResult").innerHTML = startsWithString.startsWith(startsWith);
+}
+/**
+ * This function is used to get the endsWith of the string.
+ * @param {string} endsWithString
+ * @param {string} endsWith
+ * @returns {Void} Void
+ */
+function endsWithStringMethods(endsWithString,endsWith,endsWithLength){
+    document.getElementById("lblEndsWithResult").innerHTML = endsWithString.endsWith(endsWith,endsWithLength);
+}
+/**
+ * This function is used to get the padStart of the string.
+ * @param {string} padStartString
+ * @param {number} padStart
+ * @returns {Void} Void
+ */
+function padStartStringMethods(padStartString,padStart,padStartChar){
+    debugger
+    document.getElementById("lblPadStartResult").innerHTML = padStartString.padStart(padStart,padStartChar);
+}
+/**
+ * This function is used to get the padEnd of the string.
+ * @param {string} padEndString
+ * @param {number} padEnd
+ * @param {string} padEndChar
+ * @returns {Void} Void
+ */
+function padEndStringMethods(padEndString,padEnd,padEndChar){
+    document.getElementById("lblPadEndResult").innerHTML = padEndString.padEnd(padEnd,padEndChar);
+}
+/**
+ * This function is used to get the repeat of the string.
+ * @param {string} repeatString
+ * @param {number} repeat
+ * @returns {Void} Void
+ */
+function repeatStringMethods(repeatString,repeat){
+    document.getElementById("lblRepeatResult").innerHTML = repeatString.repeat(repeat);
+}
