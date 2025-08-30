@@ -2,33 +2,287 @@
 <html>
 
 <head>
+    <title>Logical Assignment Operators (&&=, ||=, ??=)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+        }
+
+        .operator-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .operator-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        .code-example {
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+
+        .demo-button {
+            background-color: #28a745;
+        }
+
+        .demo-button:hover {
+            background-color: #218838;
+        }
+
+        .output {
+            background-color: #000;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+
+        .form-section {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .explanation {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
     <script src="logicalOperators.js"></script>
 </head>
 
 <body>
-    <form onsubmit="return false;">
-        <label>First Name</label>
-        <input type="text" id="txtFirstName" placeholder="Enter First Name" required>
-        <label>Last Name</label>
-        <input type="text" id="txtLastName" placeholder="Enter Last Name">
-        <label>Gender</label>
-        <input type="radio" id="txtGender" name="gender" value="Male" required>Male
-        <input type="radio" id="txtGender" name="gender" value="Female" required>Female
-        <label>Age</label>
-        <input type="number" id="txtAge" placeholder="Enter Age" required>
-        <label>Email</label>
-        <input type="email" id="txtEmail" placeholder="Enter Email" required>
-        <label>Education</label>
-        <select id="txtEducation" placeholder="Enter Education" required>
-            <option value="10th">10th</option>
-            <option value="12th">12th</option>
-            <option value="Graduation">Graduation</option>
-            <option value="Post Graduation">Post Graduation</option>
-        </select>
-        <button type="submit"
-            onclick="login(txtFirstName.value,txtLastName.value,txtGender.value,txtAge.value,txtEmail.value,txtEducation.value)">Login</button>
+    <div class="container">
+        <h1>Logical Assignment Operators in JavaScript</h1>
 
-    </form>
+        <div class="explanation">
+            <strong>What are Logical Assignment Operators?</strong><br>
+            These operators combine logical operations with assignment, making code more concise and readable.
+            They were introduced in ES2021 and are now widely supported in modern browsers.
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">1. Logical AND Assignment (&&=)</div>
+            <p><strong>Syntax:</strong> <code>x &&= y</code> is equivalent to <code>x && (x = y)</code></p>
+            <p><strong>Behavior:</strong> Only assigns if the left operand is truthy</p>
+
+            <div class="code-example">
+                let user = { name: "John", email: null };
+                user.name &&= user.name + " Doe"; // "John Doe" (truthy, so assignment happens)
+                user.email &&= "john@example.com"; // null (falsy, so no assignment)
+            </div>
+
+            <button class="demo-button" onclick="demonstrateAndAssignment()">Run &&= Examples</button>
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">2. Logical OR Assignment (||=)</div>
+            <p><strong>Syntax:</strong> <code>x ||= y</code> is equivalent to <code>x || (x = y)</code></p>
+            <p><strong>Behavior:</strong> Only assigns if the left operand is falsy</p>
+
+            <div class="code-example">
+                let user = { name: "", email: null, status: "active" };
+                user.name ||= "Anonymous"; // "Anonymous" (empty string is falsy)
+                user.email ||= "default@example.com"; // "default@example.com" (null is falsy)
+                user.status ||= "inactive"; // "active" (unchanged, truthy value)
+            </div>
+
+            <button class="demo-button" onclick="demonstrateOrAssignment()">Run ||= Examples</button>
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">3. Nullish Coalescing Assignment (??=)</div>
+            <p><strong>Syntax:</strong> <code>x ??= y</code> is equivalent to <code>x ?? (x = y)</code></p>
+            <p><strong>Behavior:</strong> Only assigns if the left operand is null or undefined</p>
+
+            <div class="code-example">
+                let user = { name: "", age: 0, email: null, active: false };
+                user.name ??= "Default"; // "" (unchanged, not null/undefined)
+                user.age ??= 25; // 0 (unchanged, not null/undefined)
+                user.email ??= "user@example.com"; // "user@example.com" (null triggers assignment)
+                user.active ??= true; // false (unchanged, not null/undefined)
+            </div>
+
+            <button class="demo-button" onclick="demonstrateNullishAssignment()">Run ??= Examples</button>
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">4. Comparison of All Three Operators</div>
+            <p>See how each operator behaves with different values:</p>
+            <button class="demo-button" onclick="compareOperators()">Compare All Operators</button>
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">5. Practical Use Cases</div>
+            <p>Real-world examples showing how to use these operators effectively:</p>
+            <button class="demo-button" onclick="practicalExamples()">Run Practical Examples</button>
+        </div>
+
+        <div class="operator-section">
+            <div class="operator-title">6. Run All Examples</div>
+            <p>Execute all demonstrations in sequence:</p>
+            <button class="demo-button" onclick="runAllExamples()">Run All Examples</button>
+        </div>
+
+        <div class="output" id="consoleOutput">
+            Console output will appear here...
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Interactive Demo</h2>
+        <div class="form-section">
+            <form onsubmit="return false;">
+                <label>First Name</label>
+                <input type="text" id="txtFirstName" placeholder="Enter First Name" required>
+
+                <label>Last Name</label>
+                <input type="text" id="txtLastName" placeholder="Enter Last Name">
+
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="txtGenderMale" name="gender" value="Male" required>
+                    <label for="txtGenderMale">Male</label>
+                    <input type="radio" id="txtGenderFemale" name="gender" value="Female" required>
+                    <label for="txtGenderFemale">Female</label>
+                </div>
+
+                <label>Age</label>
+                <input type="number" id="txtAge" placeholder="Enter Age" required>
+
+                <label>Email</label>
+                <input type="email" id="txtEmail" placeholder="Enter Email" required>
+
+                <label>Education</label>
+                <select id="txtEducation" required>
+                    <option value="">Select Education</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="Post Graduation">Post Graduation</option>
+                </select>
+
+                <button type="submit"
+                    onclick="login(txtFirstName.value, txtLastName.value, getSelectedGender(), txtAge.value, txtEmail.value, txtEducation.value)">Check
+                    Eligibility</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Override console.log to display in the page
+        const originalLog = console.log;
+        const outputElement = document.getElementById('consoleOutput');
+
+        console.log = function (...args) {
+            originalLog.apply(console, args);
+            outputElement.textContent += args.join(' ') + '\n';
+        };
+
+        // Function to get selected gender
+        function getSelectedGender() {
+            const genderRadios = document.querySelectorAll('input[name="gender"]');
+            for (let radio of genderRadios) {
+                if (radio.checked) {
+                    return radio.value;
+                }
+            }
+            return '';
+        }
+
+        // Clear console output
+        function clearOutput() {
+            outputElement.textContent = 'Console output will appear here...\n';
+        }
+
+        // Add clear button
+        const clearButton = document.createElement('button');
+        clearButton.textContent = 'Clear Output';
+        clearButton.onclick = clearOutput;
+        clearButton.style.backgroundColor = '#dc3545';
+        clearButton.style.marginLeft = '10px';
+        document.querySelector('.operator-section:last-of-type').appendChild(clearButton);
+    </script>
 </body>
 
 </html>
