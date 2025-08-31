@@ -3,8 +3,8 @@
  * @returns {Void} Void
  */
 function mathConstants() {
- 
-        document.getElementById("lblMathConstants").innerHTML =
+
+    document.getElementById("lblMathConstants").innerHTML =
         "<p><b>Math.E:</b> " + Math.E + "</p>" +
         "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
         "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
@@ -19,7 +19,7 @@ function mathConstants() {
  * @param {number} mathRound
  * @returns {Void} Void
  */
-function mathRound(mathRound){
+function mathRound(mathRound) {
     document.getElementById("lblMathRound").innerHTML = Math.round(mathRound);
 }
 /**
@@ -27,7 +27,7 @@ function mathRound(mathRound){
  * @param {number} mathCeil
  * @returns {Void} Void
  */
-function mathCeil(mathCeil){
+function mathCeil(mathCeil) {
     document.getElementById("lblMathCeil").innerHTML = Math.ceil(mathCeil);
 }
 /**
@@ -35,7 +35,7 @@ function mathCeil(mathCeil){
  * @param {number} mathFloor
  * @returns {Void} Void
  */
-function mathFloor(mathFloor){
+function mathFloor(mathFloor) {
     document.getElementById("lblMathFloor").innerHTML = Math.floor(mathFloor);
 }
 /**
@@ -43,7 +43,7 @@ function mathFloor(mathFloor){
  * @param {number} mathTrunc
  * @returns {Void} Void
  */
-function mathTrunc(mathTrunc){
+function mathTrunc(mathTrunc) {
     document.getElementById("lblMathTrunc").innerHTML = Math.trunc(mathTrunc);
 }
 /**
@@ -51,7 +51,7 @@ function mathTrunc(mathTrunc){
  * @param {number} mathSign
  * @returns {Void} Void
  */
-function mathSign(mathSign){
+function mathSign(mathSign) {
     document.getElementById("lblMathSign").innerHTML = Math.sign(mathSign);
 }
 
@@ -60,15 +60,15 @@ function mathSign(mathSign){
  * @param {number} mathPow
  * @returns {Void} Void
  */
-function mathPow(mathNumber,mathPow){
-    document.getElementById("lblMathPow").innerHTML = Math.pow(mathNumber,mathPow);
+function mathPow(mathNumber, mathPow) {
+    document.getElementById("lblMathPow").innerHTML = Math.pow(mathNumber, mathPow);
 }
 /**
  * This function is used to get the math sqrt.
  * @param {number} mathSqrt
  * @returns {Void} Void
  */
-function mathSqrt(mathSqrt){
+function mathSqrt(mathSqrt) {
     document.getElementById("lblMathSqrt").innerHTML = Math.sqrt(mathSqrt);
 }
 /**
@@ -76,6 +76,53 @@ function mathSqrt(mathSqrt){
  * @param {number} mathAbs
  * @returns {Void} Void
  */
-function mathAbs(mathAbs){
+function mathAbs(mathAbs) {
     document.getElementById("lblMathAbs").innerHTML = Math.abs(mathAbs);
 }
+/**
+ * this fuction is to give sing value 
+ * @param {number} mathSin
+ * @returns {Void} Void
+ * 
+ */
+function mathSin() {
+    debugger;
+    document.getElementById("lblMathSin").innerHTML = Math.sin(Math.PI / 6)
+
+}
+/**
+ * this fuction is to give sing value 
+ * @param {string} mathMax  coma saparated no value 
+ * @returns {Void} Void
+ * 
+ */
+function mathMax(mathMax) {
+    debugger;
+    let numInput = []
+    numInput = mathMax.split(",").map(Number);
+    document.getElementById("lblMathMax").innerHTML = Math.max(15, 6, 7, 8, 0)
+
+}
+
+/**
+ * this fuction is to give sing value 
+ 
+ * @returns {Void} Void
+ * 
+ */
+function mathRandom(mathRandom) {
+  
+    document.getElementById("lblMathRandom").innerHTML = Math.trunc(Math.random()*10000)
+
+}
+/**
+ * this function is use to retun a log of a given number
+ * @param {number}
+ * @returns {Void}
+ */
+function mathLog(inputNumber){
+    let numInput=0;
+    numInput=inputNumber;
+    document.getElementById("lblMathLog").innerHTML=Math.log(numInput)
+}
+
