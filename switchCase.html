@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="switchCase.js">
+    </script>
+</head>
+
+<body>
+    <select id="ddlDoctorsSpecs" onchange="getDoctorsSpecsDescription(ddlDoctorsSpecs.value)">
+        <option value="">--Select doctor type--</option>
+        <option id="OptDermatology" value="Dermatology">Dermatology</option>
+        <option id="OptNeurology" value="Neurology">Neurology</option>
+        <option id="OptOncologist" value="Oncologist">Oncologist</option>
+        <option id="OptGastroenterology" value="Gastroenterology">Gastroenterology</option>
+        <option id="OptCardiologist" value="Cardiologist">Cardiologist</option>
+    </select>
+    <p id="lblDoctorsSpecsDescription"></p>
+</body>
+
+</html>
