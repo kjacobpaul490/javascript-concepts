@@ -156,10 +156,38 @@
     <button onclick="repeatStringMethods(txtRepeatString.value,txtRepeat.value)">Repeat String Methods</button>
     <p id="lblRepeatResult"></p>
     
-    <button onclick="charCodeAtStringMethods(txtString.value)">CharCodeAt String Methods</button>
-    <button onclick="codePointAtStringMethods(txtString.value)">CodePointAt String Methods</button>
-    <button onclick="fromCharCodeStringMethods(txtString.value)">FromCharCode String Methods</button>
+  <!-- CharCodeAt String Methods -->  
+    <label>CharCodeAt String</label>
+    <input type="text" id="txtCharCodeAtString">
+    <label>CharCodeAt</label>
+    <input type="number" id="txtCharCodeAt">
+    <button onclick="charCodeAtStringMethods(txtCharCodeAtString.value,txtCharCodeAt.value)">CharCodeAt String Methods</button>
+    <p id="lblCharCodeAtResult"></p>
+
+    <!-- CodePointAt String Methods -->
+    <label>CodePointAt String</label>
+    <input type="text" id="txtCodePointAtString">
+    <label>CodePointAt</label>
+    <input type="number" id="txtCodePointAt">
+    <button onclick="codePointAtStringMethods(txtCodePointAtString.value,txtCodePointAt.value)">CodePointAt String Methods</button>
+    <p id="lblCodePointAtResult"></p>
+
+    <!-- FromCharCode String Methods -->
+   <label>FromCharCode</label>
+    <input type="text" id="txtFromCharCode">
+    <button onclick="fromCharCodeStringMethods(txtFromCharCode.value)">FromCharCode String Methods</button>
+    <p id="lblFromCharCodeResult"></p>
+   
+    <!-- FromCodePoint String Methods -->
+    <label>FromCodePoint String</label>
+   
+    <label>FromCodePoint</label>
+    <input type="text" id="txtFromCodePoint">
+    <button onclick="fromCodePointStringMethods(txtFromCodePoint.value)">FromCodePoint String Methods</button>
+    <p id="lblFromCodePointResult"></p>
+
     <button onclick="fromCodePointStringMethods(txtString.value)">FromCodePoint String Methods</button>
+
     <button onclick="rawStringMethods(txtString.value)">Raw String Methods</button>
     <button onclick="escapeStringMethods(txtString.value)">Escape String Methods</button>
     <button onclick="unescapeStringMethods(txtString.value)">Unescape String Methods</button>

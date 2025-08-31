@@ -192,3 +192,44 @@ function padEndStringMethods(padEndString,padEnd,padEndChar){
 function repeatStringMethods(repeatString,repeat){
     document.getElementById("lblRepeatResult").innerHTML = repeatString.repeat(repeat);
 }
+/**
+ * This function is used to get the charCodeAt of the string.
+ * @param {string} charCodeAtString
+ * @param {number} charCodeAt
+ * @returns {Void} Void
+ */
+function charCodeAtStringMethods(charCodeAtString,charCodeAt){
+    document.getElementById("lblCharCodeAtResult").innerHTML = charCodeAtString.charCodeAt(charCodeAt);
+}
+/**
+ * This function is used to get the codePointAt of the string.
+ * @param {string} codePointAtString
+ * @param {number} codePointAt
+ * @returns {Void} Void
+ */
+function codePointAtStringMethods(codePointAtString,codePointAt){
+    document.getElementById("lblCodePointAtResult").innerHTML = codePointAtString.codePointAt(codePointAt);
+}
+/**
+ * This function is used to get the fromCharCode of the string.
+ * @param {string} fromCharCodevalue
+ * @param {number} fromCharCode
+ * @returns {Void} Void
+ */
+function fromCharCodeStringMethods(fromCharCodevalue){
+    debugger
+
+    let result = String.fromCharCode(72, 69, 76, 76, 79)
+    document.getElementById("lblFromCharCodeResult").innerHTML = result;
+}
+/**
+ * This function is used to get the fromCodePoint of the string.
+ * @param {string} fromCodePointString
+ * @param {number} fromCodePoint
+ * @returns {Void} Void
+ */
+function fromCodePointStringMethods(fromCodePoint){
+    let result = String.fromCodePoint(fromCodePoint);
+    
+    document.getElementById("lblFromCodePointResult").innerHTML = result;
+}
