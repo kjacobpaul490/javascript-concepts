@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="classes.js" defer></script>
+</head>
+
+<body>
+    <form id="formMovie" onsubmit="createMovie()">
+        <h1>Create Movie</h1>
+        <label>Movie Name</label>
+        <input type="text" id="txtMovieName" name="MovieName">
+        <label>Movie Description</label>
+        <input type="text" id="txtMovieDescription" name="MovieDescription">
+        <label>Release Date</label>
+        <input type="date" id="txtReleaseDate" name="ReleaseDate">
+        <label>Genre</label>
+        <input type="text" id="txtGenre" name="Genre">
+        <label>Director</label>
+        <input type="text" id="txtDirector" name="Director">
+        <label>Actor</label>
+        <input type="text" id="txtActor" name="Actor">
+        <label>Language</label>
+        <input type="text" id="txtLanguage" name="Language">
+        <label>Country</label>
+        <input type="text" id="txtCountry" name="Country">
+        <label>Budget</label>
+        <input type="number" id="txtBudget" name="Budget">
+
+        <button type="submit">
+            Create Movie</button>
+    </form>
+
+    <label>Search Movie</label>
+    <input type="text" id="txtSearchMovie" name="SearchMovie">
+    <button id="btnSearchMovie">Search Movie</button>
+    
+</body>
+
+</html>

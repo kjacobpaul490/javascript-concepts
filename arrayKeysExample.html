@@ -1,0 +1,58 @@
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The keys() Method</h2>
+
+<p>Return an Array Iterator object with the keys of the array:</p>
+
+<p id="demo"></p>
+
+<script>
+// Example 1: Using keys() with an array
+const fruits = ["apple", "banana", "orange"];
+const keys = fruits.keys();
+
+let text = "Array keys():<br>";
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+// Example 2: Using Object.keys() with an object
+const browsers = {
+  "firefox": {
+    "name": "Firefox",
+    "pref_url": "about:config",
+    "releases": {
+      "1": {
+        "release_date": "2004-11-09",
+        "status": "retired",
+        "engine": "Gecko",
+        "engine_version": "1.7"
+      }
+    }
+  },
+  "chrome": {
+    "name": "Chrome",
+    "pref_url": "chrome://settings/",
+    "releases": {
+      "1": {
+        "release_date": "2008-09-02",
+        "status": "retired",
+        "engine": "Blink",
+        "engine_version": "1.0"
+      }
+    }
+  }
+};
+
+text += "<br>Object.keys():<br>";
+const objectKeys = Object.keys(browsers);
+for (let x of objectKeys) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
